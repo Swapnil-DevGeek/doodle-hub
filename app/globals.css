@@ -1,6 +1,31 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+h1.ce-header {
+  @apply text-3xl;
+  @apply font-bold;
+}
+h2.ce-header {
+  @apply text-2xl;
+  @apply font-semibold;
+}
+h3.ce-header {
+  @apply text-xl;
+  @apply font-semibold;
+}
+h4.ce-header {
+  @apply text-lg;
+  @apply font-semibold;
+}
+h5.ce-header {
+  @apply text-base;
+  @apply font-semibold;
+}
+h6.ce-header {
+  @apply text-base;
+  @apply font-semibold;
+}
 
   @layer base {
     :root {

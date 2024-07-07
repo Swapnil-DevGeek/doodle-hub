@@ -1,9 +1,10 @@
 "use client";
-import {LogoutLink, useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
-import {Button} from "@/components/ui/button";
+import {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
 import {useConvex, useMutation, useQuery} from "convex/react";
 import {api} from "@/convex/_generated/api";
 import {useEffect} from "react";
+import Header from "@/app/(routes)/dashboard/_components/Header";
+import FileList from "@/app/(routes)/dashboard/_components/FileList";
 
 export default function Dashboard(){
     const convex = useConvex();
@@ -29,10 +30,9 @@ export default function Dashboard(){
     }
 
     return(
-        <>
-            <Button>
-                <LogoutLink>Logout</LogoutLink>
-            </Button>
-        </>
+        <div className='p-8'>
+           <Header/>
+            <FileList/>
+        </div>
     )
 }
